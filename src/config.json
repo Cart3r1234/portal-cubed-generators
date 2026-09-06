@@ -1235,6 +1235,60 @@
       "dependency": "treeplacer",
       "minVersion": "1.20.1",
       "wiki": "https://github.com/OutrightWings/treeplacer_mod/wiki"
+    },
+    {
+      "id": "portalcubed:large_signage",
+      "url": "portalcubed/large_signage",
+      "path": "portalcubed/large_signage",
+      "tags": ["partners"],
+      "dependency": "portalcubed",
+      "minVersion": "26.3",
+      "wiki": "https://github.com/Fusion-Flux/Portal-Cubed-Rewrite/wiki/Data-Driven-Content-in-Portal-Cubed#signage"
+    },
+    {
+      "id": "portalcubed:small_signage",
+      "url": "portalcubed/small_signage",
+      "path": "portalcubed/small_signage",
+      "tags": ["partners"],
+      "dependency": "portalcubed",
+      "minVersion": "26.3",
+      "wiki": "https://github.com/Fusion-Flux/Portal-Cubed-Rewrite/wiki/Data-Driven-Content-in-Portal-Cubed#signage"
+    },
+    {
+      "id": "portalcubed:portal_type",
+      "url": "portalcubed/portal_type",
+      "path": "portalcubed/portal_type",
+      "tags": ["partners"],
+      "dependency": "portalcubed",
+      "minVersion": "26.3",
+      "wiki": "https://github.com/Fusion-Flux/Portal-Cubed-Rewrite/wiki/Data-Driven-Content-in-Portal-Cubed#portal-types"
+    },
+    {
+      "id": "portalcubed:construct_set",
+      "url": "portalcubed/construct_set",
+      "path": "portalcubed/construct_set",
+      "tags": ["partners"],
+      "dependency": "portalcubed",
+      "minVersion": "26.3",
+      "wiki": "https://github.com/Fusion-Flux/Portal-Cubed-Rewrite/wiki/Data-Driven-Content-in-Portal-Cubed#construct_sets"
+    },
+    {
+      "id": "portalcubed:portal_gun_skin",
+      "url": "portalcubed/portal_gun_skin",
+      "path": "portalcubed/portal_gun_skin",
+      "tags": ["partners", "assets"],
+      "dependency": "portalcubed",
+      "minVersion": "26.3",
+      "wiki": "https://github.com/Fusion-Flux/Portal-Cubed-Rewrite/wiki/Asset-Driven-Content-in-Portal-Cubed#portal-gun-skins"
+    },
+    {
+      "id": "portalcubed:portal_gun_crosshair",
+      "url": "portalcubed/portal_gun_crosshair",
+      "path": "portalcubed/portal_gun_crosshair_type",
+      "tags": ["partners", "assets"],
+      "dependency": "portalcubed",
+      "minVersion": "26.3",
+      "wiki": "https://github.com/Fusion-Flux/Portal-Cubed-Rewrite/wiki/Asset-Driven-Content-in-Portal-Cubed#portal-gun-crosshairs"
     }
   ],
   "legacyGuides": [

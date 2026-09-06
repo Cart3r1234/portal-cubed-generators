@@ -1,0 +1,63 @@
+// Wiki - https://github.com/Fusion-Flux/Portal-Cubed-Rewrite/wiki/Data-Driven-Content-in-Portal-Cubed
+
+use ::java::util::text::Text
+
+
+#[since="26.3"]
+dispatch minecraft:resource[portalcubed:large_signage] to struct {
+    /// While signage textures can be located in any subfolder of `assets/<namespace>/textures`, it is recommended to use `textures/signage`.
+    /// Signage textures must be on both the block atlas and GUI atlas to function correctly, and textures placed in `textures/signage` are automatically added to both.
+	//Both are optional but least one needs to be present; signage is invalid if neither are
+	clean_texture?: #[id(registry="texture")] string, //Both are optional but least one needs to be present; invalid if neither are.  Vanilla mcdocs don't seem to have any special handling for this from what I saw
+	dirty_texture?: #[id(registry="texture")] string,
+	/// Display name for the signage image.  Used in the signage GUI and the signage item's tooltip if it has valid signage data.
+    name: Text,
+}
+
+#[since="26.3"]
+dispatch minecraft:resource[portalcubed:small_signage] to struct SmallSignage {
+    /// While signage textures can be located in any subfolder of `assets/<namespace>/textures`, it is recommended to use `textures/signage`.
+    /// Signage textures must be on both the block atlas and GUI atlas to function correctly, and textures placed in `textures/signage` are automatically added to both.
+    /// Small Signage only uses the upper left quadrant of the texture, to avoid putting 8x8 textures on the block atlas.
+	clean_texture?: #[id(registry="texture")] string, //Same situation as above
+	dirty_texture?: #[id(registry="texture")] string,
+	/// Display name for the signage image.  Used in the signage GUI and the signage item's tooltip if it has valid signage data.
+    name: Text,
+}
+
+#[since="26.3"]
+dispatch minecraft:resource[portalcubed:construct_set] to struct {
+    /// Construct sets are structures placeable from the Construction Cannon.
+    /// Located at `data/<namespace>/portalcubed/construct_set`
+
+    /// Display name of the Construct used in the Construction Cannon GUI and tooltip.
+    name: Text, //hasn't actually been implemented yet, but is planned
+    /// When placing a construct in survival you are required to have enough materials, which includes any item in the defined tag.
+    /// All Construct Sets that use the same materials tag will be grouped together in the Construction Cannon GUI.
+    materials: (#[id(registry="item",tags="required")]),
+    /// Type controls how the construct is placed.
+    /// "Single" type construct sets have one construct that is placed in every situation, with no regard for rotation or placement location.
+    /// "Pillar" construct types can be rotated based on facing angle or which face of a block is clicked.
+    type: ConstructType,
+    chooser: ,
+}
+
+enum(string) ConstructType {
+	Single = "single",
+	Pillar = "pillar",
+}
+
+#[since="26.3"]
+dispatch minecraft:resource[portalcubed:portal_type] to struct {
+	//TODO
+}
+
+#[since="26.3"]
+dispatch minecraft:resource[portalcubed:portal_gun_skin] to struct {
+	//TODO
+}
+
+#[since="26.3"]
+dispatch minecraft:resource[portalcubed:portal_gun_crosshair] to struct {
+	//TODO
+}
